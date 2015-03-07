@@ -22,16 +22,17 @@ $(document).ready(function () {
             $content.find('button').prop('disabled', empty);
         }
 
-
         var $signForm = $signFormBlock.find('form');
-        $signForm.find('input').bind('change', checkForm);
-        $signForm.find('input[type!=radio]').bind('keyup', checkForm);
-
         var $content = $signFormBlock.find('.register-content');
 
+        $signForm.find('input').bind('change', checkForm);
+        $signForm.find('input[type!=radio]').bind('keyup', checkForm);
         $signForm.find('input[type=text][data-check]').bind('keyup', function () {
             var $tab = $content.find('input[type="radio"]:checked');
             var $this = $(this);
+            if ($tab.data('check') === false) {
+                return;
+            }
             if (!$this.val()) {
                 return;
             }
@@ -54,15 +55,28 @@ $(document).ready(function () {
             var $loader = $signFormBlock.find('.loader-container');
             var $tab = $content.find('input[type="radio"]:checked');
             action = $tab.data('action');
-            data = Form.data($form);
-            Api.call(action, data, function (data, status) {
-                console.log('success');
-                console.log(data);
-                console.log(status);
+            var data = Form.data($form);
+            Api.call(action, data, function (response, status) {
+                Crypto.build(data.pwd);
+                Crypto.setStorage(true); // Store the key in local storage
+                document.location = '/journal';
             }, function (data, status) {
                 console.log('error');
                 console.log(data);
                 console.log(status);
+                message = '';
+                if (status == 404) {
+                    message = 'Wrong password or login.';
+                } else if (status == 409) {
+                    message = 'An user with the same informations is already registered.';
+                } else if (status == 406) {
+                    message = 'Incorrect informations.';
+                }
+                $form.find('.error.message').html(message).removeClass('hidden');
+                $loader.stop().fadeOut(function () {
+                    $content.stop().fadeIn();
+                });
+
             });
             $loader.find('.message').html($tab.data('message'));
             $content.fadeOut(function () {

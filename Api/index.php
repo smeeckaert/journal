@@ -64,7 +64,7 @@ $app->get('/register', function () {
         $infos['error'] = "Existing informations";
     } catch (Exception $e) {
         $app->response->status(406);
-        $infos['error'] = "Wrong or missing informations";
+        $infos['error'] = "Wrong or missing informations (" . $e->getMessage() . ')';
     }
 
     $app->response()->body(json_encode($infos));

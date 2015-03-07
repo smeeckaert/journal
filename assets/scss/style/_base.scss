@@ -51,9 +51,18 @@ form {
         top        : 0;
         background : $pink;
         color      : $white;
-        border     : $pink_light;
         padding    : 7px;
         right      : 15px;
+        &.message {
+            border        : 1px solid $pink_light;
+            padding       : 10px;
+            right         : auto;
+            margin-bottom : 20px;
+            position      : relative;
+            &.hidden {
+                display : none;
+            }
+        }
         @include trans();
         &:before {
             font-family  : 'icomoon';

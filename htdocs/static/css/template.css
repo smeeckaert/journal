@@ -4282,12 +4282,19 @@ form .error {
   top: 0;
   background: #AD234B;
   color: #FFFFFF;
-  border: #dd597f;
   padding: 7px;
   right: 15px;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out; }
+  form .error.message {
+    border: 1px solid #dd597f;
+    padding: 10px;
+    right: auto;
+    margin-bottom: 20px;
+    position: relative; }
+    form .error.message.hidden {
+      display: none; }
   form .error:before {
     font-family: 'icomoon';
     content: "\e60c";
