@@ -1,0 +1,13 @@
+{
+  "require": {
+    "slim/slim": "~2.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Api\\": "Api/classes",
+      "Orm\\": "Orm/classes",
+      "Session\\": "Session",
+      "Fuel\\": "fuel"
+    }
+  }
+}

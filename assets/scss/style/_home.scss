@@ -1,0 +1,135 @@
+
+.content {
+    background      : url('../img/diary.jpg');
+    background-size : cover;
+    text-align      : center;
+    padding         : 60px 0;
+    h1, h3 {
+        color       : $white;
+        text-shadow : 1px 1px 1px $black_transparent;
+
+    }
+
+    h2 {
+        // text-shadow : 1px 1px 1px $white_transparent;
+
+    }
+
+    .sign-form {
+        padding-bottom : 60px;
+        input[type="radio"] {
+            display : none;
+        }
+        background     : rgba($anthracite, .2);
+        color          : $white;
+
+        .tabs {
+            .columns {
+                label {
+                    float       : none;
+                    display     : block;
+                    background  : rgba($anthracite, .1);
+                    font-size   : 1.3em;
+                    font-weight : bold;
+                    @include trans();
+                    &:hover {
+                        background : none;
+                    }
+                }
+            }
+        }
+
+        #signin:checked ~ div.tabs {
+            label[for="signin"] {
+                background : none;
+
+            }
+        }
+
+        #register:checked ~ div.tabs {
+            label[for="register"] {
+                background : none;
+
+            }
+        }
+
+        label {
+            display     : inline-block;
+            float       : right;
+            padding     : 3px 0px;
+            color       : $pink;
+            font-size   : 1.2em;
+            line-height : 38px;
+            @include text-border(darken($white, 25));
+            [class^="icon-"], [class*=" icon-"] {
+                margin-right : 20px;
+            }
+
+        }
+
+        .show-register {
+            max-height  : 0;
+            overflow    : hidden;
+            @include trans();
+            white-space : nowrap;
+        }
+        .hide-register {
+            overflow    : hidden;
+            max-width   : 200px;
+            display     : inline-block;
+            @include trans();
+            white-space : nowrap;
+
+        }
+        #register:checked {
+            & ~ * {
+                &.show-register, .show-register {
+                    max-height : 50px;
+
+                }
+                &.hide-register, .hide-register {
+                    max-width : 0px;
+                    padding   : 0;
+                    border    : 0;
+                }
+            }
+            & ~ .buttons button.show-register {
+                padding-top    : 0.8125em;
+                padding-bottom : 0.75em;
+                padding-right  : 1.5em;
+                padding-left   : 1.5em;
+                border         : 1px solid $pink_light;
+
+            }
+        }
+
+        .buttons {
+            position : relative;
+            button {
+                position   : absolute;
+                right      : 0;
+                transition : background .2s ease-in-out, padding 0s;
+                &.show-register {
+                    padding : 0;
+                    border  : 0;
+                }
+            }
+        }
+    }
+}
+
+.subtext {
+    text-align : center;
+    .bigicon {
+        margin-bottom : 20px;
+
+        span {
+            color     : $pink;
+            font-size : 7em;
+        }
+    }
+    p {
+        text-align : left;
+        padding    : 10px;
+    }
+}

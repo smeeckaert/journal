@@ -1,0 +1,18 @@
+$white : #FFFFFF;
+$black : #000000;
+$chocolate : #310404;
+$orange : #FFC048;
+$yellow : #FFFC48;
+$lime : #CAFF48;
+$pink : #AD234B;
+$pink_light : lighten($pink, 20);
+$anthracite : #2B292E;
+$black_transparent : rgba($black, .75);
+$white_transparent : rgba($white, .5);
+$black_transparent50 : rgba($black, .5);
+$black_transparent25 : rgba($black, .25);
+$white_transparent25 : rgba($white, .25);
+$white_dark : #EBE0E0;
+
+$font1 : 'Sintony', sans-serif;
+$font2 : 'Rufina', sans-serif;

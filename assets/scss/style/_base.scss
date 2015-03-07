@@ -1,0 +1,46 @@
+body {
+    @include font1();
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include font2();
+
+    color : $anthracite;
+}
+
+button {
+    box-shadow   : none;
+    background   : $pink;
+    border-color : $pink_light;
+    @include trans();
+    font-weight  : normal;
+    &:hover, &:active, &:focus {
+        background : $pink_light;
+    }
+}
+
+.hidden {
+    display : none;
+}
+
+html, body {
+    background : $white;
+    width      : 100%;
+    color      : $anthracite;
+}
+
+#content {
+    padding-top : $column-gutter / 2;
+}
+
+.right-align {
+    text-align : right;
+}
+
+a {
+    color : $pink;
+    @include trans();
+    &:active, &:hover, &:focus {
+        color : $pink_light;
+    }
+}

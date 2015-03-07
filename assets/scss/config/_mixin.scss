@@ -1,0 +1,38 @@
+@mixin roboto() {
+    font-family : 'Roboto', sans-serif;
+}
+
+@mixin font1() {
+    font-family : $font1;
+}
+
+@mixin font2() {
+    font-family : $font2;
+}
+
+@mixin text-border($color) {
+    text-shadow : 1px 1px 0px $color, -1px -1px 0px $color, 1px -1px 0px $color, -1px 1px 0px $color;
+}
+
+@mixin trans($property : all, $duration : .2s, $function : ease-in-out) {
+    transition-property        : $property;
+    transition-duration        : $duration;
+    transition-timing-function : $function;
+}
+
+$vendors : "-moz-", "-webkit-", "";
+// you can add other vendor prefixes or remove them without needing to change the mixin.
+
+@mixin vendors($property, $value) {
+    @each $vendor in $vendors {
+        #{$vendor}#{$property}: $value;
+    }
+}
+
+@mixin box-shadow($left, $top, $blur, $spread, $color, $inset : false) {
+    @if $inset {
+        @include vendors(box-shadow, inset $left $top $blur $spread $color);
+    } @else {
+        @include vendors(box-shadow, $left $top $blur $spread $color);
+    }
+}
