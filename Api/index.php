@@ -49,6 +49,9 @@ $app->get('/register', function () {
         if (empty($login) || empty($reqPwd) || empty($mail)) {
             throw new Exception("Missing parameters");
         }
+        if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+            throw new Exception("Invalid email");
+        }
         $user        = new \Api\Model\User();
         $user->login = $login;
         $user->pwd   = $password;
