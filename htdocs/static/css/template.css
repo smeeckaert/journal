@@ -4244,7 +4244,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Rufina', sans-serif;
   color: #2B292E; }
 
-button {
+button, button[disabled] {
   box-shadow: none;
   background: #AD234B;
   border-color: #dd597f;
@@ -4252,7 +4252,7 @@ button {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   font-weight: normal; }
-  button:hover, button:active, button:focus {
+  button:hover, button:active, button:focus, button[disabled]:hover, button[disabled]:active, button[disabled]:focus {
     background: #dd597f; }
 
 .hidden {

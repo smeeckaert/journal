@@ -114,15 +114,6 @@ require_once '../bootstrap.php';
                             <span class="error hidden"></span>
                         </div>
                     </div>
-                    <div class="row show-register">
-                        <div class="columns small-3">
-                            <label for="mail">Mail</label>
-                        </div>
-                        <div class="columns small-9">
-                            <input type="text" name="mail" id="mail" data-check="mail">
-                            <span class="error hidden"></span>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="columns small-3">
                             <label for="pwd">Password</label>
@@ -132,11 +123,20 @@ require_once '../bootstrap.php';
                         </div>
                     </div>
 
+                    <div class="row show-register">
+                        <div class="columns small-3">
+                            <label for="mail">Mail</label>
+                        </div>
+                        <div class="columns small-9">
+                            <input type="text" name="mail" id="mail" data-check="mail">
+                            <span class="error hidden"></span>
+                        </div>
+                    </div>
                     <div class="buttons">
-                        <button class="hide-register">
+                        <button class="hide-register" disabled>
                             Sign-in
                         </button>
-                        <button class="show-register">
+                        <button class="show-register" disabled>
                             Register
                         </button>
                     </div>
