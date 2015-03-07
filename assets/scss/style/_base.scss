@@ -44,3 +44,25 @@ a {
         color : $pink_light;
     }
 }
+
+form {
+    .error {
+        position   : absolute;
+        top        : 0;
+        background : $pink;
+        color      : $white;
+        border     : $pink_light;
+        padding    : 7px;
+        right      : 15px;
+        @include trans();
+        &:before {
+            font-family  : 'icomoon';
+            content      : "\e60c";
+            margin-right : 5px;
+        }
+        &.hidden {
+            display : block;
+            opacity : 0;
+        }
+    }
+}

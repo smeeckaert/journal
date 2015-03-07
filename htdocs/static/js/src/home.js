@@ -3,10 +3,36 @@ $(document).ready(function () {
     var $signFormBlock = $('.sign-form');
     if ($signFormBlock.length) {
         var $signForm = $signFormBlock.find('form');
+        var $content = $signFormBlock.find('.register-content');
+
+        $signForm.find('input[type=text][data-check]').bind('keyup', function () {
+            var $tab = $content.find('input[type="radio"]:checked');
+            var $this = $(this);
+            var errSpan = $this.parent().find('.error');
+
+            if ($tab.data('check') === false) {
+                errSpan.addClass('hidden');
+                return;
+            }
+            if (!$this.val()) {
+                return;
+            }
+
+            var type = $this.data('check');
+            action = 'register/check/' + type;
+            data = {check: $this.val()};
+            Api.callDelayed(action, data, function (data, status) {
+                errSpan.addClass('hidden');
+            }, function (data, status) {
+                if (status == 409) {
+                    errSpan.html('This ' + type + ' is already taken.');
+                    errSpan.removeClass('hidden');
+                }
+            }, 300);
+        });
 
         $signForm.bind('submit', function () {
             var $form = $(this);
-            var $content = $signFormBlock.find('.register-content');
             var $loader = $signFormBlock.find('.loader-container');
             var $tab = $content.find('input[type="radio"]:checked');
             action = $tab.data('action');
