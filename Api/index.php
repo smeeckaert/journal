@@ -311,7 +311,7 @@ $app->get('/todo/list', function () {
     $data  = array();
     $todos = $user->todos;
     if (!is_array($todos)) {
-        $categories = array($todos);
+        $todos = array($todos);
     }
     foreach ($todos as $todo) {
         $data[] = $todo->serialize();
