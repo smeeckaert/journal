@@ -23,7 +23,7 @@ $app->get('/signin', function () {
 $app->get('/register/check/:field', function ($field) {
     global $app;
 
-    $fields = array('mail', 'pwd');
+    $fields = array('mail', 'login');
     $check  = $app->request->params('check');
 
     if (!in_array($field, $fields) || empty($check)) {
