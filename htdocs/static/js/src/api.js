@@ -1,5 +1,6 @@
 var Api = {
-    call: function (action, data, success, error) {
+    semaphores : {},
+    call       : function (action, data, success, error) {
         data = MiddleWare.serialize(action, data);
         url = Config.Api.url + action;
         $.ajax({
@@ -10,11 +11,29 @@ var Api = {
                 success(data, status);
             },
             error  : function (response, status, eThrown) {
-
-                data = MiddleWare.unserialize(action, JSON.parse(response.responseText));
+                if (response.responseText && response.status != 404) { // Slim 404 returns rubbish
+                    data = MiddleWare.unserialize(action, JSON.parse(response.responseText));
+                } else {
+                    data = {};
+                }
                 error(data, response.status);
             }
         });
 
+    },
+    callDelayed: function (action, data, success, error, time, cancel) {
+        if (cancel === undefined) {
+            cancel = true;
+        }
+        if (cancel) {
+            var semaphore = Math.random();
+            Api.semaphores[action] = semaphore;
+        }
+        setTimeout(function () {
+            if (semaphore != Api.semaphores[action]) {
+                return;
+            }
+            Api.call(action, data, success, error);
+        }, time);
     }
 };
