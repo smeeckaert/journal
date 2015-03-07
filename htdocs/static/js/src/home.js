@@ -61,9 +61,6 @@ $(document).ready(function () {
                 Crypto.setStorage(true); // Store the key in local storage
                 document.location = '/journal';
             }, function (data, status) {
-                console.log('error');
-                console.log(data);
-                console.log(status);
                 message = '';
                 if (status == 404) {
                     message = 'Wrong password or login.';
