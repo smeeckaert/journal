@@ -6,6 +6,9 @@ use Api\Model\User;
 
 class Session
 {
+    /**
+     * @return User
+     */
     public static function user()
     {
         return static::getUser(static::getInfos());

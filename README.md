@@ -10,7 +10,8 @@ Journal is a small and secure private diary.
 
 ## License
 
-Everything here is pretty much Public Domain, except these included libraries :
+Everything here is pretty much Public Domain, excepted imported libraries including :
 
 * [jQuery](http://jquery.com/)
 * [Crypto-js](https://code.google.com/p/crypto-js/)
+* Foundation
