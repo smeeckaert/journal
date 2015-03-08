@@ -10,13 +10,13 @@ require_once 'common/header.php';
     <header>
 
         <a href="/journal">
-            <span class="icon-book"></span>
+            <span class="icon-book bigicon"></span>
 
             <h1 title="Journal">Journal</h1></a>
         <nav id="menu">
 
-            <a href="/logout">
-                Logout
+            <a href="/signout">
+                <span class="icon-key"></span> Signout
             </a>
         </nav>
     </header>
@@ -24,7 +24,7 @@ require_once 'common/header.php';
         <div class="row">
             <div class="columns large-3">
                 <div class="content">
-                    <h1>Agenda</h1>
+                    <h3><span class="icon-calendar"></span> Agenda</h3>
 
                     <div class="agenda">
                         <div class="loader-container">
@@ -39,7 +39,7 @@ require_once 'common/header.php';
             <div class="columns large-6">
                 <div class="content">
 
-                    <h1>Journal</h1>
+                    <h3><span class="icon-pen"></span> Diary</h3>
 
                     <div class="article">
                         <div class="loader-container">
@@ -53,7 +53,7 @@ require_once 'common/header.php';
             <div class="columns large-3">
                 <div class="content">
 
-                    <h1>Todo List</h1>
+                    <h3><span class="icon-clip"></span> Todo List</h3>
 
                     <div class="todolist">
                         <div class="loader-container">

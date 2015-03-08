@@ -15,7 +15,7 @@ header {
                 color : $pink_light;
             }
         }
-        span {
+        span.bigicon {
             display      : inline-block;
 
             font-size    : 2.3em;
@@ -38,5 +38,10 @@ header {
             text-shadow : 1px 1px 0px rgba($anthracite, .5);
 
         }
+    }
+    nav {
+        display    : inline-block;
+        float      : right;
+        margin-top : 12px;
     }
 }

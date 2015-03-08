@@ -4317,7 +4317,7 @@ header {
       color: #dd597f; }
     header a:hover h1 {
       color: #dd597f; }
-    header a span {
+    header a span.bigicon {
       display: inline-block;
       font-size: 2.3em;
       margin-right: 30px;
@@ -4339,6 +4339,10 @@ header {
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
       text-shadow: 1px 1px 0px rgba(43, 41, 46, 0.5); }
+  header nav {
+    display: inline-block;
+    float: right;
+    margin-top: 12px; }
 
 footer {
   font-family: 'Raleway', sans-serif;
@@ -4491,10 +4495,12 @@ footer {
     transform: rotate(360deg); } }
 
 .journal {
-  background: rgba(173, 35, 75, 0.1);
+  padding-top: 20px;
   padding-bottom: 20px; }
-  .journal h1 {
+  .journal h1, .journal h2, .journal h3 {
     text-align: center; }
+    .journal h1 [class^="icon-"], .journal h1 [class*=" icon-"], .journal h2 [class^="icon-"], .journal h2 [class*=" icon-"], .journal h3 [class^="icon-"], .journal h3 [class*=" icon-"] {
+      color: #AD234B; }
   .journal .columns .content {
     background: rgba(173, 35, 75, 0.1);
     padding: 10px; }

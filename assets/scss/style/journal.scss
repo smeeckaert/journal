@@ -1,8 +1,11 @@
 .journal {
-    h1 {
+    h1, h2, h3 {
         text-align : center;
+        [class^="icon-"], [class*=" icon-"] {
+            color : $pink;
+        }
     }
-    background     : rgba($pink, .1);
+    padding-top    : 20px;
     padding-bottom : 20px;
 
     .columns {
