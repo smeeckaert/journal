@@ -13,7 +13,7 @@
 		"../../../scss/style/_footer.scss",
 		"../../../scss/style/_home.scss",
 		"../../../scss/style/_loader.scss",
-		"../../../scss/style/journal.scss",
+		"../../../scss/style/_journal.scss",
 		"../../../scss/style/_editable.scss",
 		"../../../scss/foundation/_variables.scss",
 		"../../../scss/foundation/components/_global.scss",
