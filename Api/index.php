@@ -278,6 +278,9 @@ $app->get('/todo/add', function () {
         $todo->user_id = $user->id;
     }
     $todo->save();
+    $app->response()->body(json_encode(
+        array('id' => $todo->id)
+    ));
 });
 
 $app->get('/todo/delete', function () {
@@ -350,6 +353,9 @@ $app->get('/post/add', function () {
         $post->user_id = $user->id;
     }
     $post->save();
+    $app->response()->body(json_encode(
+        array('id' => $post->id)
+    ));
 });
 
 $app->get('/post/delete', function () {

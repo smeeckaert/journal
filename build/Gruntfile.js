@@ -25,10 +25,10 @@ module.exports = function (grunt) {
             }
         },
         watch : {
-            js  : {
-                files: ['../htdocs/static/js/**/*.js'],
-                tasks: ['uglify']
-            },
+            //js  : {
+            //   files: ['../htdocs/static/js/**/*.js'],
+            //   tasks: ['uglify']
+            //},
             sass: {
                 files: ['../assets/scss/**/*.scss'],
                 tasks: ['sass']

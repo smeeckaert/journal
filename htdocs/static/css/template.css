@@ -4198,6 +4198,9 @@ a.th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-trash:before {
+  content: "\e60d"; }
+
 .icon-warning-outline:before {
   content: "\e60c"; }
 
@@ -4304,9 +4307,8 @@ form .error {
     opacity: 0; }
 
 header {
-  display: none;
   padding: 0px 30px;
-  background: #EBE0E0; }
+  background: rgba(173, 35, 75, 0.1); }
   header a {
     display: inline-block;
     line-height: 2.3em;
@@ -4348,21 +4350,21 @@ footer {
     width: 20px;
     height: 20px; }
 
-.content {
+.home .content {
   background: url('../img/diary.jpg');
   background-size: cover;
   text-align: center;
   padding: 60px 0; }
-  .content h1, .content h3 {
+  .home .content h1, .home .content h3 {
     color: #FFFFFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75); }
-  .content .sign-form {
+  .home .content .sign-form {
     padding-bottom: 60px;
     background: rgba(43, 41, 46, 0.2);
     color: #FFFFFF; }
-    .content .sign-form input[type="radio"] {
+    .home .content .sign-form input[type="radio"] {
       display: none; }
-    .content .sign-form .tabs .columns label {
+    .home .content .sign-form .tabs .columns label {
       float: none;
       display: block;
       background: rgba(43, 41, 46, 0.1);
@@ -4371,13 +4373,13 @@ footer {
       transition-property: all;
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out; }
-      .content .sign-form .tabs .columns label:hover {
+      .home .content .sign-form .tabs .columns label:hover {
         background: none; }
-    .content .sign-form #signin:checked ~ div.tabs label[for="signin"] {
+    .home .content .sign-form #signin:checked ~ div.tabs label[for="signin"] {
       background: none; }
-    .content .sign-form #register:checked ~ div.tabs label[for="register"] {
+    .home .content .sign-form #register:checked ~ div.tabs label[for="register"] {
       background: none; }
-    .content .sign-form label {
+    .home .content .sign-form label {
       display: inline-block;
       float: right;
       padding: 3px 0px;
@@ -4385,16 +4387,16 @@ footer {
       font-size: 1.2em;
       line-height: 38px;
       text-shadow: 1px 1px 0px #bfbfbf, -1px -1px 0px #bfbfbf, 1px -1px 0px #bfbfbf, -1px 1px 0px #bfbfbf; }
-      .content .sign-form label [class^="icon-"], .content .sign-form label [class*=" icon-"] {
+      .home .content .sign-form label [class^="icon-"], .home .content .sign-form label [class*=" icon-"] {
         margin-right: 20px; }
-    .content .sign-form .show-register {
+    .home .content .sign-form .show-register {
       max-height: 0;
       overflow: hidden;
       transition-property: all;
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
       white-space: nowrap; }
-    .content .sign-form .hide-register {
+    .home .content .sign-form .hide-register {
       overflow: hidden;
       max-width: 200px;
       display: inline-block;
@@ -4402,81 +4404,82 @@ footer {
       transition-duration: 0.2s;
       transition-timing-function: ease-in-out;
       white-space: nowrap; }
-    .content .sign-form #register:checked ~ *.show-register, .content .sign-form #register:checked ~ * .show-register {
+    .home .content .sign-form #register:checked ~ *.show-register, .home .content .sign-form #register:checked ~ * .show-register {
       max-height: 50px; }
-    .content .sign-form #register:checked ~ *.hide-register, .content .sign-form #register:checked ~ * .hide-register {
+    .home .content .sign-form #register:checked ~ *.hide-register, .home .content .sign-form #register:checked ~ * .hide-register {
       max-width: 0px;
       padding: 0;
       border: 0; }
-    .content .sign-form #register:checked ~ .buttons button.show-register {
+    .home .content .sign-form #register:checked ~ .buttons button.show-register {
       padding-top: 0.8125em;
       padding-bottom: 0.75em;
       padding-right: 1.5em;
       padding-left: 1.5em;
       border: 1px solid #dd597f; }
-    .content .sign-form .buttons {
+    .home .content .sign-form .buttons {
       position: relative; }
-      .content .sign-form .buttons button {
+      .home .content .sign-form .buttons button {
         position: absolute;
         right: 0;
         transition: background .2s ease-in-out, padding 0s; }
-        .content .sign-form .buttons button.show-register {
+        .home .content .sign-form .buttons button.show-register {
           padding: 0;
           border: 0; }
-
-.subtext {
+.home .subtext {
   text-align: center; }
-  .subtext .bigicon {
+  .home .subtext .bigicon {
     margin-bottom: 20px; }
-    .subtext .bigicon span {
+    .home .subtext .bigicon span {
       color: #AD234B;
       font-size: 7em; }
-  .subtext p {
+  .home .subtext p {
     text-align: left;
     padding: 10px; }
 
-.loader-container .message {
-  margin-top: 10px; }
-.loader-container .loader {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  margin-right: 1em;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #2B292E;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite; }
-  .loader-container .loader.large {
-    width: 150px;
-    height: 150px; }
-  .loader-container .loader:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
+.loader-container {
+  text-align: center; }
+  .loader-container .message {
+    margin-top: 10px; }
+  .loader-container .loader {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 1em;
+    margin: auto;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #AD234B;
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite; }
-  .loader-container .loader:after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #FFFFFF;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite; }
+    border-top-color: #2B292E;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; }
+    .loader-container .loader.large {
+      width: 150px;
+      height: 150px; }
+    .loader-container .loader:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #AD234B;
+      -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite; }
+    .loader-container .loader:after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #FFFFFF;
+      -webkit-animation: spin 1.5s linear infinite;
+      animation: spin 1.5s linear infinite; }
 
 @-webkit-keyframes spin {
   0% {
@@ -4486,5 +4489,34 @@ footer {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+.journal {
+  background: rgba(173, 35, 75, 0.1);
+  padding-bottom: 20px; }
+  .journal h1 {
+    text-align: center; }
+  .journal .columns .content {
+    background: rgba(173, 35, 75, 0.1);
+    padding: 10px; }
+    .journal .columns .content .ajax-content {
+      display: none; }
+
+div[data-editable] {
+  position: relative; }
+  div[data-editable] .fieldContent {
+    cursor: text; }
+  div[data-editable] .fieldDelete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #AD234B;
+    font-family: 'icomoon';
+    content: "\e60d";
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out; }
+    div[data-editable] .fieldDelete:hover {
+      color: #dd597f; }
 
 /*# sourceMappingURL=template.css.map */

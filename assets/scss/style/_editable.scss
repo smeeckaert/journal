@@ -1,0 +1,21 @@
+div[data-editable] {
+    position : relative;
+
+    .fieldContent {
+        cursor : text;
+
+    }
+    .fieldDelete {
+        position    : absolute;
+        right       : 0;
+        top         : 0;
+        color       : $pink;
+        font-family : 'icomoon';
+        content     : "\e60d";
+        cursor      : pointer;
+        @include trans();
+        &:hover {
+            color : $pink_light;
+        }
+    }
+}

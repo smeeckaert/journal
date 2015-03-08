@@ -41,12 +41,15 @@ if (PROD) {
     <script src="/static/js/libs/crypto/pbkdf2.js"></script>
     <script src="/static/js/src/config.js"></script>
     <script src="/static/js/src/cookie.js"></script>
+    <script src="/static/js/src/editable.js"></script>
     <script src="/static/js/src/crypto.js"></script>
     <script src="/static/js/src/form.js"></script>
     <script src="/static/js/src/home.js"></script>
     <script src="/static/js/src/api.js"></script>
     <script src="/static/js/src/middleware.js"></script>
     <script src="/static/js/src/middleware/crypt.js"></script>
+    <script src="/static/js/src/todo.js"></script>
+    <script src="/static/js/src/journal.js"></script>
 
 <?php
 }

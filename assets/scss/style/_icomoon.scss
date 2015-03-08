@@ -23,6 +23,10 @@
     -moz-osx-font-smoothing : grayscale;
 }
 
+.icon-trash:before {
+    content : "\e60d";
+}
+
 .icon-warning-outline:before {
     content : "\e60c";
 }

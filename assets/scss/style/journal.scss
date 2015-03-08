@@ -1,0 +1,17 @@
+.journal {
+    h1 {
+        text-align : center;
+    }
+    background     : rgba($pink, .1);
+    padding-bottom : 20px;
+
+    .columns {
+        .content {
+            background : rgba($pink, .1);
+            padding    : 10px;
+            .ajax-content {
+                display : none;
+            }
+        }
+    }
+}

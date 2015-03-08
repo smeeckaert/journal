@@ -7,8 +7,12 @@ var Api = {
             url    : url,
             data   : data,
             success: function (response, status) {
-                data = MiddleWare.unserialize(action, response);
-                success(data, status);
+                if (response) {
+                    data = MiddleWare.unserialize(action, JSON.parse(response));
+                }
+                if (success) {
+                    success(data, status);
+                }
             },
             error  : function (response, status, eThrown) {
                 if (response.responseText && response.status != 404) { // Slim 404 returns rubbish
@@ -16,7 +20,9 @@ var Api = {
                 } else {
                     data = {};
                 }
-                error(data, response.status);
+                if (error) {
+                    error(data, response.status);
+                }
             }
         });
 
