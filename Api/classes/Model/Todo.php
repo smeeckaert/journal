@@ -2,7 +2,7 @@
 
 namespace Api\Model;
 
-use Orm\Model;
+use FW\Orm\Model;
 
 /**
  * Class Todo

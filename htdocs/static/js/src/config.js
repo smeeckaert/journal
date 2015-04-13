@@ -1,5 +1,5 @@
 var Config = {
     Api: {
-        url: '/api/'
+        url: '/Api/'
     }
 };

@@ -59,7 +59,7 @@ $app->get('/register', function () {
         $user->save();
         \Session\Session::set($login, $password);
         $infos['authenticated'] = true;
-    } catch (\Orm\Model\Exception\Unique $e) {
+    } catch (FW\Orm\Model\Exception\Unique $e) {
         $app->response->status(409);
         $infos['error'] = "Existing informations";
     } catch (Exception $e) {

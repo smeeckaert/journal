@@ -12,4 +12,4 @@ if (PROD) {
     $user     = 'root';
     $password = '';
 }
-\Orm\DB::init($dsn, $user, $password);
+\FW\Orm\DB::init($dsn, $user, $password);
