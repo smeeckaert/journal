@@ -6,12 +6,14 @@ Journal is a small and secure private diary.
 
 ## Todo
 
-* Rework the API because Slim is messy
+* Rework the API because Slim is messy using /fw
 
 ## License
 
-Everything here is pretty much Public Domain, excepted imported libraries including :
+Pretty much every  code here is  Public Domain, excepted imported libraries including, but not limited to :
 
 * [jQuery](http://jquery.com/)
 * [Crypto-js](https://code.google.com/p/crypto-js/)
 * Foundation
+
+If you don't see License informations on top of a file, it's probably PD.

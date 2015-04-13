@@ -349,7 +349,7 @@ $app->get('/post/add', function () {
         }
         $post->import($data);
     } else {
-        $post          = new \Api\Model\Todo($data);
+        $post          = new \Api\Model\Post($data);
         $post->user_id = $user->id;
     }
     $post->save();

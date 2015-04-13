@@ -1,12 +1,14 @@
 var Editable = {
-    field: function (type, action, content, id) {
+    field: function (type, action, content, id, deletable) {
         $field = $("<div/>")
             .attr('data-editable', action)
             .attr('data-field', 'text');
         $content = $("<" + type + "/>").addClass('fieldContent').html(content);
         $field.append($content);
-        $content = $("<div/>").addClass('fieldDelete').html('<span class="icon-trash"></span>');
-        $field.append($content);
+        if (deletable === undefined || deletable) {
+            $content = $("<div/>").addClass('fieldDelete').html('<span class="icon-trash"></span>');
+            $field.append($content);
+        }
 
         if (!id) {
             $field.attr('data-new', 'true');

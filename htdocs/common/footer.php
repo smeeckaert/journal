@@ -45,10 +45,12 @@ if (PROD) {
     <script src="/static/js/src/crypto.js"></script>
     <script src="/static/js/src/form.js"></script>
     <script src="/static/js/src/home.js"></script>
+    <script src="/static/js/src/date.js"></script>
     <script src="/static/js/src/api.js"></script>
     <script src="/static/js/src/middleware.js"></script>
     <script src="/static/js/src/middleware/crypt.js"></script>
     <script src="/static/js/src/todo.js"></script>
+    <script src="/static/js/src/diary.js"></script>
     <script src="/static/js/src/journal.js"></script>
 
 <?php

@@ -46,7 +46,10 @@ require_once 'common/header.php';
                             <div class="loader large"></div>
                             <div class="message">Loading</div>
                         </div>
-                        <div class="ajax-content"></div>
+                        <div class="ajax-content">
+                            <div class="date"></div>
+                            <div class="post"></div>
+                        </div>
                     </div>
                 </div>
             </div>

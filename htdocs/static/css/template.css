@@ -4524,5 +4524,11 @@ div[data-editable] {
     transition-timing-function: ease-in-out; }
     div[data-editable] .fieldDelete:hover {
       color: #dd597f; }
+  div[data-editable] form.editable input {
+    margin: 0;
+    border: 0;
+    font-size: 1em;
+    padding: 5px;
+    margin-left: -5px; }
 
 /*# sourceMappingURL=template.css.map */
