@@ -1,9 +1,12 @@
 <footer>
-    Pinecone Studio
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         width="521.63px" height="585.316px" viewBox="0 0 521.63 585.316"
-         style="enable-background:new 0 0 521.63 585.316;"
-         xml:space="preserve">
+    <div class="logo">
+        <span class="text">
+        Pinecone Studio
+            </span>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="521.63px" height="585.316px" viewBox="0 0 521.63 585.316"
+             style="enable-background:new 0 0 521.63 585.316;"
+             xml:space="preserve">
 <g id="Logo_Black">
     <path style="fill:#90A4AE;" d="M475.34,322.605h-0.029L317.5,404.799h0.842c-25.434,13.249-45.396,47.551-45.396,76.234v52.134
 		v52.149l203.242-106.273c25.434-13.246,45.441-47.555,45.441-76.23V350.67v-52.148L475.34,322.605z"/>
@@ -25,6 +28,7 @@
 		v26.071l-100.103-53.135c-12.721-6.619-21.205-23.771-21.205-38.113V99.078V73.011L149.43,85.042z"/>
 </g>
 </svg>
+    </div>
 </footer>
 </body>
 <?php

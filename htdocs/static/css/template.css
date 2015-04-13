@@ -4345,14 +4345,27 @@ header {
     margin-top: 12px; }
 
 footer {
-  font-family: 'Raleway', sans-serif;
-  color: #9fb4be;
-  line-height: 20px;
-  text-align: right;
-  margin-right: 5px; }
-  footer svg {
-    width: 20px;
-    height: 20px; }
+  text-align: right; }
+  footer .logo {
+    font-family: 'Raleway', sans-serif;
+    color: #9fb4be;
+    line-height: 20px;
+    margin-right: 5px;
+    position: absolute;
+    right: 0; }
+    footer .logo .text {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 0;
+      height: 20px;
+      transition-property: all;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out; }
+    footer .logo:hover .text {
+      max-width: 200px; }
+    footer .logo svg {
+      width: 20px;
+      height: 20px; }
 
 .home .content {
   background: url('../img/diary.jpg');

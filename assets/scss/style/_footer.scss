@@ -1,11 +1,32 @@
 footer {
-    font-family  : 'Raleway', sans-serif;
-    color        : lighten(#263238, 50);
-    line-height  : 20px;
-    text-align   : right;
-    margin-right : 5px;
-    svg {
-        width  : 20px;
-        height : 20px;
+
+    text-align : right;
+
+    .logo {
+        font-family  : 'Raleway', sans-serif;
+        color        : lighten(#263238, 50);
+        line-height  : 20px;
+        margin-right : 5px;
+        position     : absolute;
+        right        : 0;
+
+        .text {
+            display   : inline-block;
+            overflow  : hidden;
+            max-width : 0;
+            height    : 20px;
+            @include trans();
+        }
+
+        &:hover {
+            .text {
+                max-width : 200px;
+            }
+        }
+
+        svg {
+            width  : 20px;
+            height : 20px;
+        }
     }
 }
